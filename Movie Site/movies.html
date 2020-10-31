@@ -1,0 +1,271 @@
+<html>
+
+  <head>
+    <title>Prostar Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="res/logo.png" type="image/png" sizes="16x20">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="movies.css">
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <header>
+
+        <div class="navigation">
+
+          <a class="links" href="index.html"><img class="logo" src="res/logo.png" alt="Prostar"/></a>
+          <a class="links text" href="#">Movies</a>
+          <a class="links text" href="#tv_series">TV Series</a>
+          <a class="links text" href="#audio">Audio</a>
+
+
+        </div>
+
+        <div class="bar"></div>
+
+      </header>
+
+      <div class="content">
+
+        <div class="head-content">
+
+          <div class="slideshow-container">
+            <div class="slides">
+              <img src="res/pic9Cars.jpg" alt="hero carousel">            </div>
+
+            <div class="slides">
+              <img src="res/pic8.jpg" alt="hero carousel">            </div>
+
+            <div class="slides">
+              <img src="res/pic10Doraemon.jpg" alt="hero carousel">            </div>
+
+            <div class="slides">
+              <img src="res/pic11Pica.jpg" alt="hero carousel">            </div>
+
+            <div class="slides">
+              <img src="res/pic7.jpg" alt="hero carousel">            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+          </div>
+
+        </div>
+        <br> 
+ 
+        <div class="dropdown">
+          <button class="dropbtn"><span id="genreText">Genre</span><i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a onclick="getMediaPosters(this.text)">All</a>
+            <a onclick="getMediaPosters(this.text)">Action</a>
+            <a onclick="getMediaPosters(this.text)">Drama</a>
+            <a onclick="getMediaPosters(this.text)">Sci-Fi</a>
+          </div>
+
+        </div>
+      
+
+        <div class="search-container">
+          <form onsubmit="javascript:return false;">
+            <input type="text" class="input-medium search-query" placeholder="Search your favourite movie title" name="search" oninput="updateResults()">
+           
+            <div class="search-container-button">
+              <button type="submit" onclick="updateResults()"><i class="fa fa-search"></i></button>
+            </div>
+
+          </form>
+        </div>
+      
+        <div id="media-carousel-container">
+
+
+          <div id="media-holder-action">
+
+            <div id="image-container-action">
+              <div class="movies-action">
+                <div class="media-carousel-movies">
+                  <img src="res/Diverted.png" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Diverted</b><br/>Indian crime tragedy film.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/The Little Mermaid.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">The Little Mermaid</b><br/>Thriller, Mystery & Comedy </div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/Shrek 3D.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Shrek 3D</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/captivity.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Captivity</b><br/>Japanese manga series written by Tsugumi.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/BlackPanther.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Black Panther</b><br/>2003 American martial arts film.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/Detective Pikachu.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Detective Pikachu</b><br/>Indian action drama film.</div>
+                </div>
+              </div>
+
+              <div class="movies-drama">
+                <div class="media-carousel-movies">
+                  <img src="res/Doraemon _Stand by Me.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Doraemon _Stand by Me</b><br/>Indian crime tragedy film.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/Finding Nemo.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Finding Nemo</b><br/>Thriller, Mystery & Comedy .</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/Lauras-Counterplays.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Lauras-Counterplays</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/TheNeighbour.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">TheNeighbour</b><br/>2016 ‧ Fantasy/Science Fiction.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/Girl.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Kiss</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">K3G</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Shaurya</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Cheeni Kam</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Ishq Vishq</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Padmaavat</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Kai Po Che</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Raabta</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+              </div>
+
+              <div class="movies-scifi">
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Interstellar</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/StarWars.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Star Wars</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Thor</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Captain America</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">X-Men</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Black Widow</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Iron-Man</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Hulk</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Captain Marvel</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Wonder Woman</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Batwoman</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Batman</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Superman</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Superwoman</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Doctor Strange</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Mars</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Gravity</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+                <div class="media-carousel-movies">
+                  <img src="res/g.jpg" alt="media carousel" width=200 height=200 />
+                  <div class="overlay"><b class="movie-title">Martian</b><br/>A Marvel Comics superhero team.</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--<div id="no-results">No Results Found.</div>--> 
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+
+      <div class="copyright">
+        <a class="links" href="index.html"><img class="logo" src="res/logo.png" alt="Prostar"/></a>
+        <div class="text"> &copy Prostars Entertainment Pvt. Ltd. || All Rights Reserved.</div>
+      </div>
+
+    </footer>
+
+
+
+
+
+    <!--useless -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+
+</html>
